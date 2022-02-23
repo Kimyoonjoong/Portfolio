@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOOOI</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/jquery.bxslider.min.css">
+    <link rel="stylesheet" href="./css/imagehover.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+<style>
+    /* start header */
+    body {
+font-family: 'Quicksand', sans-serif;
+font-family: 'Titillium Web', sans-serif;
+height: 100vh;
+margin: auto;
+overflow-x: hidden;
+}
+
+header {
+height: 120px;
+}
+
+.header {
+width: 1440px;
+margin: auto;
+padding-top: 1em;
+}
+
+h1 {
+width: 260px;
+float: left;
+font-size: 0;
+}
+
+.gnb {
+display: flex;
+justify-content: flex-end;
+}
+
+.gnb ul {
+display: flex;
+}
+
+.gnb>ul>li>a {
+display: block;
+padding: 0.5em;
+color: #666;
+}
+
+.gnb>ul>li:nth-child(1) a {
+font-weight: bold;
+}
+
+.gnb>ul>li:nth-child(2) a {
+font-weight: bold;
+}
+
+.lnb {
+display: flex;
+justify-content: start;
+width: 1440px;
+position: relative;
+}
+
+.lnb ul {
+display: flex;
+padding-top: 2em;
+}
+
+.lnb>ul>li:first-of-type a{color: rgb(248, 159, 174) !important; font-weight: bold !important;}
+
+
+.down {
+border-right: 1px solid #666;
+height: 18px;
+margin: 3px 10px 0px 0px;
+}
+
+.lnb>ul>li>a {
+display: block;
+padding-right: 1em;
+font-size: 18px;
+color: #666;
+}
+
+.lnb>ul>li>a:hover {
+font-weight: bold;
+text-decoration: none;
+}
+
+
+   /* end header */
+
+   /* start bootstrap */
+.glyphicon-chevron-left {
+background-image: url(./images/previous.png);
+background-repeat: no-repeat;
+background-size: 40px;
+}
+
+.glyphicon-chevron-right {
+background-image: url(./images/next.png);
+background-repeat: no-repeat;
+background-size: 40px;
+}
+
+.glyphicon-chevron-left::before {
+content: none;
+}
+
+.glyphicon-chevron-right::before {
+content: none;
+}
+
+.carousel-indicators li {
+border: 1px solid black;
+}
+
+.carousel-indicators .active {
+width: 12px;
+height: 12px;
+margin: 0;
+background-color: black;
+}
+
+.carousel-control {
+width: 100px;
+}
+
+.carousel-control.left, .carousel-control.right {
+background-image: none;
+}
+
+    /* 버튼 위치 및 백그라운드 크기 조절 */
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+left: 180%;
+width: 50px;
+height: 50px;
+}
+
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+right: 130%;
+width: 50px;
+height: 50px;
+}
+    /* end bootstrap */
+
+    /* start section */
+.section01 {
+margin: auto;
+padding-top: 2em;
+}
+   
+    /* mainbanner */
+#carousel-example-generic {
+width: 100%;
+height: 370px;
+margin: auto;
+overflow: hidden;
+margin-bottom: 80px;
+}
+
+
+    /* start mainbest */
+.mainbest {
+width: 1920px;
+position: relative;
+margin: auto;
+}
+
+.mainbest>h2 {
+text-align: center;
+padding-top: 2em;
+font-size: 25px;
+color: #666;
+}
+
+#mainbestUI {
+width: 1440px;
+margin: auto;
+margin-bottom: 30px;
+}
+
+#mainbestUI>ul {
+display: flex;
+justify-content: center;
+padding: 1em;
+}
+
+#mainbestUI>ul>li {
+padding: 1em;
+}
+
+.themaU1 {
+width: 1440px;
+margin: auto;
+float: left;
+padding: 1em;
+margin-left: 380px;
+position: absolute;
+top: 250px;
+}
+
+.themaU1 ul {
+display: flex;
+flex-wrap: wrap;
+}
+
+.themaU1 img {
+padding: 1em;
+}
+
+.themaU2 {
+width: 1440px;
+margin: auto;
+float: left;
+padding: 1em;
+margin-left: 380px;
+position: absolute;
+top: 250px;
+}
+
+.themaU2 ul {
+display: flex;
+flex-wrap: wrap;
+}
+
+.themaU2 img {
+padding: 1em;
+}
+
+.themaU3 {
+width: 1440px;
+margin: auto;
+float: left;
+padding: 1em;
+margin-left: 380px;
+position: absolute;
+top: 250px;
+}
+
+.themaU3 ul {
+display: flex;
+flex-wrap: wrap;
+}
+
+.themaU3 img {
+padding: 1em;
+}
+
+.themaU4 {
+width: 1440px;
+margin: auto;
+float: left;
+padding: 1em;
+margin-left: 380px;
+position: absolute;
+top: 250px;
+}
+
+.themaU4 ul {
+display: flex;
+flex-wrap: wrap;
+}
+
+.themaU4 img {
+padding: 1em;
+}
+
+.themaU5 {
+width: 1440px;
+margin: auto;
+float: left;
+padding: 1em;
+margin-left: 380px;
+position: absolute;
+top: 250px;
+}
+
+.themaU5 ul {
+display: flex;
+flex-wrap: wrap;
+}
+
+.themaU5 img {
+padding: 1em;
+}
+
+.themaU6 {
+width: 1440px;
+margin: auto;
+float: left;
+padding: 1em;
+margin-left: 380px;
+position: absolute;
+top: 250px;
+}
+
+.themaU6 ul {
+display: flex;
+flex-wrap: wrap;
+}
+
+.themaU6 img {
+padding: 1em;
+}
+
+.themaU7 {
+width: 1440px;
+margin: auto;
+float: left;
+padding: 1em;
+margin-left: 380px;
+position: absolute;
+top: 250px;
+}
+
+.themaU7 ul {
+display: flex;
+flex-wrap: wrap;
+}
+
+.themaU7 img {
+padding: 1em;
+}
+
+.themaU8 {
+width: 1440px;
+margin: auto;
+float: left;
+padding: 1em;
+margin-left: 380px;
+position: absolute;
+top: 250px;
+}
+
+.themaU8 ul {
+display: flex;
+flex-wrap: wrap;
+}
+
+.themaU8 img {
+padding: 1em;
+}
+
+    /* end mainbest */
+
+    /* start flowername */
+.wrapper {
+margin: auto;
+clear: both;
+margin-top: 800px;
+}
+
+.wrapper h2 {
+text-align: center;
+padding-bottom: 2em;
+font-size: 25px;
+color: #666;
+}
+
+.flowername {
+position: relative;
+}
+
+figcaption h3, p {
+text-align: center;
+position: relative;
+left: -30px;
+}
+
+.bxcontrol {
+margin-left: 210px;
+}
+
+.bxslider {
+margin: auto;
+left: 10px;
+}
+
+.bxslider img {
+padding: 0.5em;
+}
+
+.imghvr-slide-down:hover img {
+opacity: 0.3;
+}
+
+.imghvr-slide-down {
+width: 300px !important;
+}
+    /* end flowername */
+
+
+    /* start mainsns */
+.mainsns {
+width: 1920px;
+margin: auto;
+margin-bottom: 200px;
+padding-top: 200px;
+}
+
+.mainsns a:hover {
+font-weight: bold;
+}
+
+.mainsns h2, h3 {
+text-align: center;
+}
+
+.mainsns h2 {
+padding: 0.3em;
+}
+
+.mainsns span {
+color: #666;
+}
+
+.mainsns h3 {
+font-weight: normal;
+}
+
+.imghvr-slide-up>img {
+padding: 0.3em;
+width: 225px;
+height: 225px;
+background-color: #fff;
+}
+
+.mainsns_img01 {
+display: flex;
+justify-content: center;
+}
+
+.mainsns_img02 {
+display: flex;
+justify-content: center;
+}
+
+.imghvr-slide-up:hover img {
+opacity: 0.6;
+}
+
+.imghvr-slide-up>figcaption>a {
+	display: block;
+	margin: auto;
+	margin-left: 30px;
+	margin-top: 180px;
+}
+
+.imghvr-slide-up>figcaption>a:nth-of-type(2) {
+	margin-left: 70px;
+}
+
+.imghvr-slide-up>figcaption>a:nth-of-type(3) {
+	margin-left: 110px;
+}
+    /* end mainsns */
+  
+     /* start footer */
+footer {
+width: 1920px;
+height: 100px;
+position: relative;
+margin: auto;
+}
+
+.footer {
+width: 1300px;
+height: 100px;
+margin: auto;
+border-top: 1px solid gray;
+}
+
+.footerTop li {
+float: left;
+padding: 0.2em;
+padding-top: 1em;
+}
+
+.footerTop, .footerBottom {
+height: 50px;
+color: #666;
+float: left;
+font-size: 12px;
+}
+
+.footerBottom p {
+font-size: 12px;
+left: 5px;
+}
+
+.footerTop {
+width: 450px;
+}
+
+.footerBottom {
+font-size: 14px;
+clear: both;
+}
+
+.footerwidth01 {
+width: 600px;
+}
+
+.footerRight {
+text-align: center;
+font-size: 12px;
+float: left;
+margin-left: 50px;
+font-weight: bold;
+position: relative;
+bottom: 25px;
+}
+
+.footerRight a {
+padding: 0.2em;
+margin-right: 50px;
+}
+
+.footerRight>a:nth-of-type(1) {
+border: 2px solid #232c4d;
+border-radius: 8px;
+}
+
+.footerRight>a:nth-of-type(2) {
+border: 2px solid#232c4d;
+border-radius: 8px;
+}
+
+.footerCall {
+float: left;
+position: absolute;
+left: 1350px;
+top: -7px;
+}
+
+.footerCall h3 {
+font-size: 16px;
+}
+
+.footerCall h2 {
+text-align: center;
+font-size: 20px;
+color: #2c3650;
+}
+
+.footercall_border {
+border-left: 1px solid gray;
+position: absolute;
+}
+    /* end footer */
+</style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <h1>logo <img src="./images/main-logo.png" alt=""></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="#">JOIN</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">고객후기</a></li>
+                </ul>
+            </nav>
+            <nav class="lnb">
+                <ul>
+                    <li><a href="sub01.html">정기배송</a></li>
+                    <div class="down"></div>
+                    <li><a href="#">시즌상품</a></li>
+                    <div class="down"></div>
+                    <li><a href="#">모어모이</a></li>
+                    <div class="down"></div>
+                    <li><a href="#">웨딩부캐</a></li>
+                    <div class="down"></div>
+                    <li><a href="#">이벤트</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="section01">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active"> <img src="./images/main_banner01.jpg" alt="">
+                    <div class="carousel-caption"> </div>
+                </div>
+                <div class="item"> <img src="./images/main_banner02.jpg" alt="">
+                    <div class="carousel-caption"> </div>
+                </div>
+                <div class="item"> <img src="./images/main_banner03.jpg" alt="">
+                    <div class="carousel-caption"> </div>
+                </div>
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only"></span> </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only"></span> </a>
+        </div>
+        <!-- start mainbest -->
+        <div class="mainbest">
+            <h2>종류별 Best상품</h2> <span id="mainbestUI">
+                        <ul>
+                           <li><a href="#"><img src="./images/main_thema_icon01_off.jpg" alt="" class="thema_icon"></a></li>
+                           <li><a href="#"><img src="./images/main_thema_icon02_off.jpg" alt="" class="thema_icon"></a></li>
+                           <li><a href="#"><img src="./images/main_thema_icon03_off.jpg" alt="" class="thema_icon"></a></li>
+                           <li><a href="#"><img src="./images/main_thema_icon04_off.jpg" alt="" class="thema_icon"></a></li>
+                           <li><a href="#"><img src="./images/main_thema_icon05_off.jpg" alt="" class="thema_icon"></a></li>
+                           <li><a href="#"><img src="./images/main_thema_icon06_off.jpg" alt="" class="thema_icon"></a></li>
+                           <li><a href="#"><img src="./images/main_thema_icon07_off.jpg" alt="" class="thema_icon"></a></li>
+                           <li><a href="#"><img src="./images/main_thema_icon08_off.jpg" alt="" class="thema_icon"></a></li>
+                        
+                        </ul>
+                    </span>
+            <!-- thema ul -->
+            <div class="themaU1">
+                <ul>
+                    <li>
+                        <a href="#"><img src="./images/main_thema01.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/main_thema02.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/main_thema03.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/main_thema04.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/main_thema05.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/main_thema06.jpg" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="themaU2">
+                <ul>
+                    <li>
+                        <a href="#"><img src="./images/thema_U2_01.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U2_02.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U2_03.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U2_04.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U2_05.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U2_06.jpg" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="themaU3">
+                <ul>
+                    <li>
+                        <a href="#"><img src="./images/thema_U3_01.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U3_02.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U3_03.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U3_04.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U3_05.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U3_06.jpg" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="themaU4">
+                <ul>
+                    <li>
+                        <a href="#"><img src="./images/thema_U4_01.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U4_02.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U4_03.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U4_04.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U4_05.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U4_06.jpg" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="themaU5">
+                <ul>
+                    <li>
+                        <a href="#"><img src="./images/thema_U5_01.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U5_02.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U5_03.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U5_04.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U5_05.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U5_06.jpg" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="themaU6">
+                <ul>
+                    <li>
+                        <a href="#"><img src="./images/thema_U6_01.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U6_02.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U6_03.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U6_04.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U6_05.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U6_06.jpg" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="themaU7">
+                <ul>
+                    <li>
+                        <a href="#"><img src="./images/thema_U7_01.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U7_02.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U7_03.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U7_04.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U7_05.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U7_06.jpg" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="themaU8">
+                <ul>
+                    <li>
+                        <a href="#"><img src="./images/thema_U8_01.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U8_02.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U8_03.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U8_04.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U8_05.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/thema_U8_06.jpg" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- start flowername -->
+        <div class="wrapper">
+            <h2>사람들이 많이 찾는 꽃말</h2>
+            <div class="bxcontrol">
+                <div class="bxslider ">
+                    <figure class="flowername imghvr-slide-down"> <img src="./images/flowername_01.jpg" alt="">
+                        <figcaption>
+                            <h3>장미</h3>
+                            <p>열렬한 사랑</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="flowername imghvr-slide-down"> <img src="./images/flowername_02.jpg" alt="">
+                        <figcaption>
+                            <h3>튤립</h3>
+                            <p>사랑의 고백,매혹,영원한 애정,경솔</p>
+                            <a href="#"></a>
+                        </figcaption>
+                    </figure>
+                    <figure class="flowername imghvr-slide-down"> <img src="./images/flowername_03.jpg" alt="">
+                        <figcaption>
+                            <h3>수국</h3>
+                            <p>진실된 사랑, 진심</p>
+                            <a href="#"></a>
+                        </figcaption>
+                    </figure>
+                    <figure class="flowername imghvr-slide-down"> <img src="./images/flowername_04.jpg" alt="">
+                        <figcaption>
+                            <h3>프리지아</h3>
+                            <p>새로운 시작, 당신의 앞날</p>
+                            <a href="#"></a>
+                        </figcaption>
+                    </figure>
+                    <figure class="flowername imghvr-slide-down"> <img src="./images/flowername_05.jpg" alt="">
+                        <figcaption>
+                            <h3>해바라기</h3>
+                            <p>당신만을 바라 볼게요</p>
+                            <a href="#"></a>
+                        </figcaption>
+                    </figure>
+                    <figure class="flowername imghvr-slide-down"> <img src="./images/flowername_06.jpg" alt="">
+                        <figcaption>
+                            <h3>라일락</h3>
+                            <p>첫사랑, 사랑의 시작</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="flowername imghvr-slide-down"> <img src="./images/flowername_07.jpg" alt="">
+                        <figcaption>
+                            <h3>리시안셔스</h3>
+                            <p>변치 않는 사랑</p>
+                            <a href="#"></a>
+                        </figcaption>
+                    </figure>
+                    <figure class="flowername imghvr-slide-down"> <img src="./images/flowername_08.jpg" alt="">
+                        <figcaption>
+                            <h3>작약</h3>
+                            <p>행복한 결혼</p>
+                            <a href="#"></a>
+                        </figcaption>
+                    </figure>
+                    <figure class="flowername imghvr-slide-down"> <img src="./images/flowername_09.jpg" alt="">
+                        <figcaption>
+                            <h3>카라</h3>
+                            <p>천년의 사랑</p>
+                            <a href="#"></a>
+                        </figcaption>
+                    </figure>
+                    <figure class="flowername imghvr-slide-down"> <img src="./images/flowername_10.jpg" alt="">
+                        <figcaption>
+                            <h3>미니델피늄</h3>
+                            <p>행복하게 해줄게요</p>
+                            <a href="#"></a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <!-- end flowername -->
+        <!-- start mainsns -->
+        <div class="mainsns clearFix">
+            <h2>MOOOI&nbsp;<span> @Instagram </span></h2>
+            <h3>모이에서 늘 꽃과 함께하는 일상을 만나보세요:D&nbsp;<a href="#">@moooi.kr 바로가기</a></h3>
+          
+            <div class="mainsns_img01">
+                <div class="imghvr-slide-up"> <img src="./images/sns01.jpg" alt="">
+                    <figcaption>
+                        <a href="#"><img src="./images/facebook.png" alt=""></a>
+                        <a href="#"><img src="./images/twitter.png" alt=""></a>
+                        <a href="#"><img src="./images/pinterest.png" alt=""></a>
+                    </figcaption>
+                </div>
+                <div class="imghvr-slide-up"> <img src="./images/sns02.jpg" alt="">
+                    <figcaption>
+                        <a href="#"><img src="./images/facebook.png" alt=""></a>
+                        <a href="#"><img src="./images/twitter.png" alt=""></a>
+                        <a href="#"><img src="./images/pinterest.png" alt=""></a>
+                    </figcaption>
+                </div>
+                <div class="imghvr-slide-up"> <img src="./images/sns03.jpg" alt="">
+                    <figcaption>
+                        <a href="#"><img src="./images/facebook.png" alt=""></a>
+                        <a href="#"><img src="./images/twitter.png" alt=""></a>
+                        <a href="#"><img src="./images/pinterest.png" alt=""></a>
+                    </figcaption>
+                </div>
+                <div class="imghvr-slide-up"> <img src="./images/sns04.jpg" alt="">
+                    <figcaption>
+                        <a href="#"><img src="./images/facebook.png" alt=""></a>
+                        <a href="#"><img src="./images/twitter.png" alt=""></a>
+                        <a href="#"><img src="./images/pinterest.png" alt=""></a>
+                    </figcaption>
+                </div>
+                <div class="imghvr-slide-up"> <img src="./images/sns05.jpg" alt="">
+                    <figcaption>
+                        <a href="#"><img src="./images/facebook.png" alt=""></a>
+                        <a href="#"><img src="./images/twitter.png" alt=""></a>
+                        <a href="#"><img src="./images/pinterest.png" alt=""></a>
+                    </figcaption>
+                </div>
+                <div class="imghvr-slide-up"> <img src="./images/sns06.jpg" alt="">
+                    <figcaption>
+                        <a href="#"><img src="./images/facebook.png" alt=""></a>
+                        <a href="#"><img src="./images/twitter.png" alt=""></a>
+                        <a href="#"><img src="./images/pinterest.png" alt=""></a>
+                    </figcaption>
+                </div>
+            </div>
+            <div class="mainsns_img02 ">
+                <div class="imghvr-slide-up"> <img src="./images/sns07.jpg" alt="">
+                    <figcaption>
+                        <a href="#"><img src="./images/facebook.png" alt=""></a>
+                        <a href="#"><img src="./images/twitter.png" alt=""></a>
+                        <a href="#"><img src="./images/pinterest.png" alt=""></a>
+                    </figcaption>
+                </div>
+                <div class="imghvr-slide-up"> <img src="./images/sns08.jpg" alt="">
+                    <figcaption>
+                        <a href="#"><img src="./images/facebook.png" alt=""></a>
+                        <a href="#"><img src="./images/twitter.png" alt=""></a>
+                        <a href="#"><img src="./images/pinterest.png" alt=""></a>
+                    </figcaption>
+                </div>
+                <div class="imghvr-slide-up"> <img src="./images/sns09.jpg" alt="">
+                    <figcaption>
+                        <a href="#"><img src="./images/facebook.png" alt=""></a>
+                        <a href="#"><img src="./images/twitter.png" alt=""></a>
+                        <a href="#"><img src="./images/pinterest.png" alt=""></a>
+                    </figcaption>
+                </div>
+                <div class="imghvr-slide-up"> <img src="./images/sns10.jpg" alt="">
+                    <figcaption>
+                        <a href="#"><img src="./images/facebook.png" alt=""></a>
+                        <a href="#"><img src="./images/twitter.png" alt=""></a>
+                        <a href="#"><img src="./images/pinterest.png" alt=""></a>
+                    </figcaption>
+                </div>
+                <div class="imghvr-slide-up"> <img src="./images/sns11.jpg" alt="">
+                    <figcaption>
+                        <a href="#"><img src="./images/facebook.png" alt=""></a>
+                        <a href="#"><img src="./images/twitter.png" alt=""></a>
+                        <a href="#"><img src="./images/pinterest.png" alt=""></a>
+                    </figcaption>
+                </div>
+                <div class="imghvr-slide-up"> <img src="./images/sns12.jpg" alt="">
+                    <figcaption>
+                        <a href="#"><img src="./images/facebook.png" alt=""></a>
+                        <a href="#"><img src="./images/twitter.png" alt=""></a>
+                        <a href="#"><img src="./images/pinterest.png" alt=""></a>
+                    </figcaption>
+                </div>
+            </div>
+            </div>
+    </section>
+    <!-- start footer -->
+    <footer>
+        <div class="footer">
+            <div class="footerwidth01">
+                <div class="footerTop clearFix">
+                    <ul>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">|&nbsp;&nbsp;개인정보처리방침</a></li>
+                        <li><a href="#">|&nbsp;&nbsp;서비스소개</a></li>
+                        <li><a href="#">|&nbsp;&nbsp;공지사항</a></li>
+                        <li><a href="#">|&nbsp;&nbsp;제휴안내</a></li>
+                    </ul>
+                </div>
+                <div class="footerBottom clearFix">
+                    <p> 프롬나드 대표:김윤중 서울특별시 서초구 강남대로 00길 00, 1층
+                        <br> 사업자등록번호:010-6279-2653 통신판매업신고:제2xxx-서울-0xxxx </p>
+                </div>
+            </div>
+            <div class="footerRight clearFix"> <a href="#">help@index.kr&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; ></a> <a href="#">공식페이스북바로가기&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; ></a> </div>
+            <div class="footerCall">
+                <h3>고객행복센터</h3>
+                <h2>6279-2653</h2>
+                <div>AM 10:00 ~ 12:00, PM 2:00 ~ 5:00</div>
+            </div>
+        </div>
+        <style>
+           
+        </style>
+    </footer> 
+   
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.bxslider.min.js"></script>
+    <script>
+        $(function(){
+            $('.mainbest>div').eq(1).fadeOut();
+            $('.mainbest>div').eq(2).fadeOut();
+            $('.mainbest>div').eq(3).fadeOut();
+            $('.mainbest>div').eq(4).fadeOut();
+            $('.mainbest>div').eq(5).fadeOut();
+            $('.mainbest>div').eq(6).fadeOut();
+            $('.mainbest>div').eq(7).fadeOut();
+        $('#mainbestUI li').mouseover(function(){
+           
+            $('.mainbest>div').stop().fadeOut();
+         
+            let n = $(this).index();
+           
+            $('.mainibest>div').stop().fadeOut();
+            $('.mainbest>div').eq(n).stop().fadeIn();
+            $('.thema_icon').addClass().eq(n).attr('src',$('.thema_icon').eq(n).attr('src').replace('_off','_on'))
+            
+            $('#mainbestUI li').mouseleave(function(){
+                let n = $(this).index();
+                $('.thema_icon').addClass().eq(n).attr('src',$('.thema_icon').eq(n).attr('src').replace('_on','_off'))
+            })
+        }) 
+       
+    })
+
+   
+    $(function(){
+    $('.bxslider').bxSlider({
+        mode: 'horizontal',
+        pagerType: 'short',
+        moveSlides: 5,
+        slideMargin:0,
+        infiniteLoop: true,
+        minSlides:5,
+        maxSlides:5,
+        speed: 400,
+        slideWidth:300,
+       
+    });
+   
+  
+  })
+ 
+    </script>
+</body>
+</html>

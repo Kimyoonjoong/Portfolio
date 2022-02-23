@@ -1,0 +1,8 @@
+@charset 'utf-8';
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+a{color: #333; text-decoration: none;}
+li{list-style: none;}
+img{vertical-align: top; border: none;}
+body{font-size: ; font-family: ;}
+.clearFix::after{clear: both; display: block; content: '';}

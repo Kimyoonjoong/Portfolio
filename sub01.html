@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOOOI</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="./css/jquery.fullPage.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+<style>
+    /* start header */
+    body {
+font-family: 'Quicksand', sans-serif;
+font-family: 'Titillium Web', sans-serif;
+height: 100vh;
+margin: auto;
+overflow-x: hidden;
+}
+
+header {
+height: 120px;
+}
+
+.header {
+width: 1440px;
+margin: auto;
+padding-top: 1em;
+}
+
+h1 {
+width: 260px;
+float: left;
+font-size: 0;
+}
+
+.gnb {
+display: flex;
+justify-content: flex-end;
+}
+
+.gnb ul {
+display: flex;
+}
+
+.gnb>ul>li>a {
+display: block;
+padding: 0.5em;
+color: #666;
+}
+
+.gnb>ul>li:nth-child(1) a {
+font-weight: bold;
+}
+
+.gnb>ul>li:nth-child(2) a {
+font-weight: bold;
+}
+
+.lnb {
+display: flex;
+justify-content: start;
+width: 1440px;
+position: relative;
+}
+
+.lnb ul {
+display: flex;
+padding-top: 2em;
+}
+
+
+.on::after {
+    content: '' !important;
+    width:80px  !important;
+    height: 6px !important;
+    border-radius: 3px !important;
+    background: #fdcfcf !important;
+    position: absolute;
+    left: 0 !important;
+    bottom: 16px;
+    z-index: -1 !important;}
+.lnb>ul>li:first-of-type a{color: #666 !important;
+    font-weight: bold !important;
+}
+.down {
+border-right: 1px solid #666;
+height: 18px;
+margin: 3px 10px 0px 0px;
+}
+
+.lnb>ul>li>a {
+display: block;
+padding-right: 1em;
+font-size: 18px;
+color: #666;
+}
+
+.lnb>ul>li>a:hover {
+font-weight: bold;
+
+text-decoration: none;
+}
+   /* end header */
+
+/* start section */
+.sub_main{padding-top: 2em;}
+
+  
+     /* start footer */
+footer {
+width: 1920px;
+height: 100px;
+position: fixed;
+margin: auto;
+bottom: 0;
+}
+
+.footer {
+width: 1300px;
+height: 100px;
+margin: auto;
+border-top: 1px solid gray;
+}
+
+.footerTop li {
+float: left;
+padding: 0.2em;
+padding-top: 1em;
+}
+
+.footerTop, .footerBottom {
+height: 50px;
+color: #666;
+float: left;
+font-size: 12px;
+}
+
+.footerBottom p {
+font-size: 12px;
+left: 5px;
+}
+
+.footerTop {
+width: 450px;
+}
+
+.footerBottom {
+font-size: 14px;
+clear: both;
+}
+
+.footerwidth01 {
+width: 600px;
+}
+
+.footerRight {
+text-align: center;
+font-size: 12px;
+float: left;
+margin-left: 50px;
+font-weight: bold;
+position: relative;
+bottom: 25px;
+}
+
+.footerRight a {
+padding: 0.2em;
+margin-right: 50px;
+}
+
+.footerRight>a:nth-of-type(1) {
+border: 2px solid #232c4d;
+border-radius: 8px;
+}
+
+.footerRight>a:nth-of-type(2) {
+border: 2px solid#232c4d;
+border-radius: 8px;
+}
+
+.footerCall {
+float: left;
+position: absolute;
+left: 1350px;
+top: -7px;
+}
+
+.footerCall h3 {
+font-size: 16px;
+}
+
+.footerCall h2 {
+text-align: center;
+font-size: 20px;
+color: #2c3650;
+}
+
+.footercall_border {
+border-left: 1px solid gray;
+position: absolute;
+}
+    /* end footer */
+
+
+    .nav{width: 1000px; margin: auto; padding-top: 2em;}
+           .nav-tabs{border-bottom: 1px solid rgb(2, 9, 109);}
+           .nav-tabs>li.active>a{font-size: 16px; color: rgb(2, 9, 109) !important;  
+            font-weight: bold; border: 2px rgb(2, 9, 109) solid  !important; border-bottom: none !important; }
+           a{color: #666 !important; border-bottom: none !important;}
+           
+           .tab-content{height: 3000px;}
+           #plan{ text-align: center; padding-top: 6em;  height: 100vh;}
+           #plan h2{color: rgb(2, 9, 109); font-weight: bold;}
+           #plan p{color: #666; font-size: 16px;}
+
+           .down_arrow{position: absolute; left: 50%; top: 80%;
+            animation: horizontal 1.5s ease-in-out infinite;
+        
+        }
+         @keyframes horizontal{
+            0%{margin-top: 0;}
+            50%{margin-top: -5px;}
+            100%{margin-top: 0;}
+         }
+         .fix{font-size: 30px;}
+         .section{ height: 1000px; }
+		.section:nth-child(2n){ height: 1000px; background-color: skyblue;}
+        #section{ width: 2000px; margin: auto; display: flex;}
+        #section>div{ width:40%; padding: 2em;}
+        .orderAccount{width: 420px; background-color: #fff; }
+        .orderAccount>.box{width: 500px; height: 850px; background-color: rgb(221, 220, 220);position: sticky;  top:0;
+            border-radius: 10px; margin-left: 300px;
+        }
+        .productList{ height: 2000px;   margin-left: 200px;
+        color: #666; font-size: 24px;
+        }
+        .box2{ background-color: #fff;  width: 420px; margin-left: 40px; border-radius: 10px; position: absolute; top: 30px;} 
+        
+        
+        .img img{width: 420px; border-radius: 10px;}
+        .orderAccount{ color:#666; }
+        .orderItem{ display: flex; flex-wrap: wrap;}
+        .orderSize{ width:100%;  padding: 1em; color:#333; font-weight: 900; font-size: 24px;}
+        .orderSize~div{ width:50%; padding: 1em; }
+        .orderItem{font-size: 18px;}
+        /* .orderItem span{ display: block; font-size: 24px; font-weight: 900;} */
+        .orderAmount>div{  display: flex; justify-content: space-between;
+                padding: 1rem;
+        }
+        #productDiscount{ color:blue; }
+        #paymentAmount{ color:red; font-size: 26px;}
+
+        .productSize>img{width: 300px; }
+        .productSize{ display: flex; justify-content: space-around; padding: 1em 1em 2em 0 ; text-align: center;} 
+        
+        #more{ text-align: center; padding-top: 1em;  height: 100vh;}
+        #more h2{color: rgb(170, 79, 231); font-weight: bold; margin-bottom: 100px;}
+        #more p{color: #666; font-size: 20px; margin-bottom: 200px;}
+        #more p:nth-of-type(2){color: rgb(39, 36, 36); font-size: 15px; margin-bottom: 50px; }
+        #more img{width: 950px; margin-bottom: 100px;}
+        #more img:nth-of-type(2){width: 1000px;}
+        #more > div:nth-of-type(1){margin-bottom: 100px;}
+
+        #review{width: 1200px; color: #666; height: 100vh;}
+                        .re_head{ font-size: 26px; color: rgb(2, 9, 109); text-align: center;
+                            padding: 1em;
+                        }
+                        .re_head>span{color: orange;}
+                        .re_head>div{color: #666; font-size: 12px;}
+                        .title{display: flex;  width: 1000px; border: 1px solid lightgray;
+                            border-left: none; border-right: none; border-bottom: none; 
+                            position: relative; left: 450px; padding: 3em; margin-bottom: 10px;}
+                        .title>span{margin-right: 50px; font-size: 16px;}
+                        .title>p{font-size: 18px; font-weight: bold;}
+                        .title>div{padding-left: 1em; font-size: 16px;}
+                        .content{width: 1000px; position: relative; left: 620px; padding: 1em 0 0 1em; display: none; border: 1px solid lightgray; border-top: none;
+                            border-left: none; border-right: none;  border-bottom: none; margin-bottom: 5px;}
+                        .content>p{ font-size: 16px; padding-top: 0.4em;}
+                        /* .title:hover +.content{display: block;} */
+
+                        .title2{display: flex !important;  width: 1000px; border: 1px solid lightgray;
+                            border-left: none; border-right: none;  border-bottom: none;
+                            position: relative; left: 450px; padding: 3em; margin-bottom: 2px;}
+                        .title2>span{margin-right: 50px; font-size: 16px;}
+                        .title2>p{font-size: 18px; font-weight: bold;}
+                        .title2>div{padding-left: 1em; font-size: 16px;}
+                        .content2{width: 1000px; position: relative; left: 620px; padding: 1em 0 0 1em; display: none; border: 1px solid lightgray;
+                             border-top: none; border-left: none; border-right: none;  border-bottom: none; margin-bottom: 5px;}
+                        .content2>p{ font-size: 16px; padding-top: 0.4em;}
+                         .title2, .content2{opacity: 0;}
+                       
+                        .more_click{position: relative; left: 70%; padding-top: 3em; font-size: 18px;}
+                        .more_click>img{margin-left: 10px;}
+</style>
+</head>
+<body>
+    <div id="fullpage">
+        <div class="section">
+    <header>
+        <div class="header">
+            <h1>logo <a href="index.html"><img src="./images/main-logo.png" alt=""></a></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="#">JOIN</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">고객후기</a></li>
+                </ul>
+            </nav>
+            <nav class="lnb">
+                <ul>
+                    <li><a class="on" href="sub01.html">정기배송</a></li>
+                    <div class="down"></div>
+                    <li><a href="#">시즌상품</a></li>
+                    <div class="down"></div>
+                    <li><a href="#">모어모이</a></li>
+                    <div class="down"></div>
+                    <li><a href="#">웨딩부캐</a></li>
+                    <div class="down"></div>
+                    <li><a href="#">이벤트</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<!-- end header -->
+
+    <section>
+        <div class="sub_main"><img src="./images/sub_mainbanner.jpg" alt=""></div>
+
+        
+                <div role="tabpanel">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                      <li role="presentation" class="active"><a href="#plan" aria-controls="plan" role="tab" data-toggle="tab">배송플랜</a></li>
+                      <li role="presentation"><a href="#more" aria-controls="more" role="tab" data-toggle="tab">자세히보기</a></li>
+                      <li role="presentation"><a href="#review" aria-controls="review" role="tab" data-toggle="tab">고객후기</a></li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                      <div role="tabpanel" class="tab-pane active" id="plan">
+                          <h2>유러피언 스타일의꽃을일상에서 정기적으로 받아보세요!
+                              (수리중)
+                          </h2>
+                          <p>계절감을 담은 6~8종의 꽃으로 구성되며<br>
+                             플로리스트가 2주 단위로 새로운 디자인을 공개해요.</p>
+                             <div class="down_arrow"><img src="./images/down_arrow.png" alt=""></div>
+                            
+                      </div>
+                     
+                      <div role="tabpanel" class="tab-pane" id="more">
+                            <img src="./images/more_main.jpg" alt="">
+                            <h2>"스위트데이 에디션"</h2>
+                            <div>-</div>
+                           <p>
+                               "네가 길을 잃을 떄 <br>
+                                내가 안내할게 <br>
+                                난 바로 네 옆에 있어 <br>
+                                    <br>
+                                사랑은 나침반이야"<br>
+                                <br>
+
+                                -디즈니&ltLove Is A Compass&gt 중
+                           </p>
+                         
+                           <p>
+                               신이 세상 모든 곳에 함께 하실 수 없기에 <br>
+                               사람 마음속에 '사랑'을 넣어주셨다고 해요 <br>
+                               <br>
+                               그래서 어떻게 살아가야 하는지<br>
+                               어떤 선택을 해야 할지 모를때에는<br>
+                               '사랑'이 시키는 대로 하라고 합니다. <br>
+                               <br>
+                               힘든 시기 지치고 아무런 힘이 없을 떄, <br>
+                               새로운시작을 해야 하지만 어디로 가야 할지 모를떄 <br>
+                               '사랑'만 생각하세요 <br>
+                               <br>
+                               사랑은 모든 사람에게 절대 변하지 않는 <br>
+                               True North 같은 인생의 나침반이니까요. <br>
+                               <br>
+                               2022년도 모이 꽃과 함께 사랑 가득 예쁜 삶이 되시길 바라요.
+                           </p>
+                           <img src="./images/more_img.jpg" alt="">
+                      </div>
+                
+                      <div role="tabpanel" class="tab-pane" id="review">
+                          <div class="re_head">고객후기<span>(3,863)건</span>
+                            <div>
+                                꽃을 받아본 고객님들의 솔직한 후기를 만나보세요. <br>
+                                (일반리뷰 500점, 포토리뷰 1000점 마일리지 적립)
+                            </div>
+                          </div> 
+                          <!-- re_head end -->
+                      
+                          <div class="title"><span>myorange30</span> <p>양이 조금 적은 느낌은 있는데 자잘한 꽃으로양이 많았던 기존의 스타일</p><div>2022.01.12</div></div>
+                          <div class="content"><img src="./images/review_01.PNG" alt="">
+                           <p> 양이 조금 적은 느낌은 있는데 자잘한 꽃으로 양이 많았던 기존의 스타일과 달라서 좋았습니다. <br> 날씨 때문에 아무래도 꽃이 싱싱하지 않게 오는데 보존제가 같이 안온건 좀 아쉬웠어요</p>
+                           
+                        </div>
+                        <div class="title"><span>sorakuku</span> <p>가장 이쁜 상태로 싱싱하게 도착해준 꽃들 늘 감동이에요.</p><div>2022.01.12</div></div>
+                        <div class="content"><img src="./images/review_02.PNG" alt="">
+                            <p>가장 이쁜 상태로 싱싱하게 도착해준 꽃들 늘 감동이예요. <br> 늘 다양하고 풍성한 디자인에 받자마자 자동으로 소리 지르게 됩니다^^</p>
+                        </div>
+                        <div class="title"><span>rhdkfk0056</span> <p>생화 대란에 이정도 퀄리티는 너무 감사한거 같아요!</p><div>2022.01.07</div></div>
+                        <div class="content"><img src="./images/review_03.PNG" alt="">
+                            <p>생화 대란에 이정도 퀄리티는 너무 감사한 것 같아요! 그리고 배송도 꼼꼼히 와서 좋았습니다! 거베라는 확실히 꽃잎이 약해서 찍혀있는 부분이 티가 나서 속상했지만 그래도 맘에 들었어요!!</p>
+                        </div>
+                        <div class="title"><span>smh823</span> <p>이번꽃은 조금 시들긴했지만 그래도 이쁘네요.</p><div>2022.01.07</div></div>
+                        <div class="content"><img src="./images/review_04.PNG" alt="">
+                            <p>이번꽃은 조금 시들긴했지만 그래도 이쁘네요.</p>
+                        </div>
+                        <div class="title"><span>cense7</span> <p>오전에 일찍 배달되고 꽃도 엄청 풍성해서 여자친구가 많이 좋아하네요~!</p><div>2022.01.04</div></div>
+                        <div class="content"><p>오전에 일찍 배달되고 꽃도 엄청 풍성해서 여자친구가 많이 좋아하네요~!! 포장도 정성스럽고 무엇보다 알찬 구성으로 화사한 분위기가 좋은 거 같습니다.</p>
+                        </div>
+
+                          <div class="more_click">후기 더보기
+                            <img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/17/000000/external-down-arrow-arrows-dreamstale-lineal-dreamstale-2.png"/>
+
+                          </div>
+                        <!-- title2 start -->
+                        <div class="title2"><span>myorange30</span> <p>양이 조금 적은 느낌은 있는데 자잘한 꽃으로양이 많았던 기존의 스타일</p><div>2022.01.12</div></div>
+                          <div class="content2"><img src="./images/review_01.PNG" alt="">
+                           <p> 양이 조금 적은 느낌은 있는데 자잘한 꽃으로 양이 많았던 기존의 스타일과 달라서 좋았습니다. <br> 날씨 때문에 아무래도 꽃이 싱싱하지 않게 오는데 보존제가 같이 안온건 좀 아쉬웠어요</p>
+                           
+                        </div>
+                        <div class="title2"><span>sorakuku</span> <p>가장 이쁜 상태로 싱싱하게 도착해준 꽃들 늘 감동이에요.</p><div>2022.01.12</div></div>
+                        <div class="content2"><img src="./images/review_02.PNG" alt="">
+                            <p>가장 이쁜 상태로 싱싱하게 도착해준 꽃들 늘 감동이예요. <br> 늘 다양하고 풍성한 디자인에 받자마자 자동으로 소리 지르게 됩니다^^</p>
+                        </div>
+                        <div class="title2"><span>rhdkfk0056</span> <p>생화 대란에 이정도 퀄리티는 너무 감사한거 같아요!</p><div>2022.01.07</div></div>
+                        <div class="content2"><img src="./images/review_03.PNG" alt="">
+                            <p>생화 대란에 이정도 퀄리티는 너무 감사한 것 같아요! 그리고 배송도 꼼꼼히 와서 좋았습니다! 거베라는 확실히 꽃잎이 약해서 찍혀있는 부분이 티가 나서 속상했지만 그래도 맘에 들었어요!!</p>
+                        </div>
+                        <div class="title2"><span>smh823</span> <p>이번꽃은 조금 시들긴했지만 그래도 이쁘네요.</p><div>2022.01.07</div></div>
+                        <div class="content2"><img src="./images/review_04.PNG" alt="">
+                            <p>이번꽃은 조금 시들긴했지만 그래도 이쁘네요.</p>
+                        </div>
+                        <div class="title2"><span>cense7</span> <p>오전에 일찍 배달되고 꽃도 엄청 풍성해서 여자친구가 많이 좋아하네요~!</p><div>2022.01.04</div></div>
+                        <div class="content2"><p>오전에 일찍 배달되고 꽃도 엄청 풍성해서 여자친구가 많이 좋아하네요~!! 포장도 정성스럽고 무엇보다 알찬 구성으로 화사한 분위기가 좋은 거 같습니다.</p>
+                        </div>
+                        <!-- title2 end -->
+                    </div>
+                    </div>
+                 </div>
+            </div>
+
+          
+<div id="section" >
+    
+                <div class="orderAccount">
+                    <div class="box">
+                        <div class="box2">
+                            <div class="img"> <img src="./images/calculator_main.jpg" alt=""></div>
+                            <div class="orderItem">
+                                <div class="orderSize">상품을 선택해주세요.</div>
+                                <div class="orderCycle">배송주기 <br><span>-</span>
+                                </div>
+                                <div class="orderNumberOfDeliery">배송횟수 <br><span>-</span></div>
+                                <div id="orderDate">첫배송일<br><span>-</span></div>
+                                <div id="orderWeekday">선호배송일<br><span>-</span></div>
+                            </div>
+                            <div class="orderAmount">
+                                <div id="productPice"><span>주문금액</span> <span>0원</span></div>
+                                <div id="productDiscount"><span>정기할인금액</span> <span>0원</span></div>
+                                <div id="paymentAmount"><span>결제예상금액</span> <span>0원</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="productList">
+                    <div>onOff 리스트로 보기</div>
+                    <input type="checkbox" id="productCheck">
+                    <div class="productItem">
+                        <div>1. 꽃다발은 어떤 크기가 좋을까요?</div>
+                        <div class="productSize">
+                            <div class="productbox1">
+                                <img src="./images/productsize1.jpg" alt="">
+                                <div> 베이직</div>
+                            </div>
+                            <div class="productbox2">
+                                <img src="./images/productsize2.jpg" alt="">
+                                <div>볼륨업</div>
+                            </div>
+                        </div>
+                        <div>2. 얼마나 자주 꽃다발을 받아보시겠어요?</div>
+                        <div class="deliveryCycle">
+                            <div>2주에 한번</div>
+                            <div>4주에 한번</div>
+                        </div>
+                        <div class="numberOfDelivery">
+                            <div class="numberOfDeliveryTarget">기간을 정하지 않고 2주마다 계속 받기</div>
+                            <div>1개월</div>
+                            <div>2개월</div>
+                            <div>3개월</div>
+                            <div>4개월</div>
+                        </div>
+                        <div>희망하는 첫배송일을 선택해주세요.</div>
+                        <div class="deliveryDate">
+                            <input type="date" id="date" class="date" name="date">
+                        </div>
+                        <div>선호요일</div>
+                        <div class="deliveryWeekday">
+                            <div>화</div>
+                            <div>수</div>
+                            <div>목</div>
+                            <div>금</div>
+                        </div>
+    
+                    </div>
+    
+                </div>
+</div>
+         
+
+    </section>
+    
+
+
+  
+   
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.mousewheel.min.js"></script>
+    <script>
+            $('#myTab a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+
+let st = 0;
+      
+
+
+        $('.productSize').on('click', function(event){
+            let  textValue = $(event.target).text();
+            //let  textValue = event.target.innerHTML;
+            
+            $('.orderSize').text( textValue); 
+
+            if( textValue == '베이직'){ won = 24900; }
+            else{ won = 33900; }
+        })// productSize
+
+        $('.deliveryCycle').on('click', function(event){
+            let orderSize = $('.orderSize').text();
+            if( !orderSize.indexOf('상품') ){
+                alert('상품을 선택해 주세요.')
+            } 
+            
+            let  textValue = $(event.target).text();
+
+            const  span = document.createElement('span');
+            $(span).text(textValue);
+
+            let text = $('.orderCycle').text();
+
+            if( text.indexOf('한번') < 0 ){
+                $('.orderCycle').append( $(span)); 
+            }else{
+                $('.orderCycle').find('span').remove();
+                $('.orderCycle').append($(span));
+            }
+            check =  $('.orderCycle').text().indexOf('2') != -1 ? 2 : !$('.orderCycle').text().indexOf('4') != -1 ? 4 : '값을 선택해주세요.'; 
+        }) // deliveryCycle end 
+        
+        let check = 0; 
+        $('.numberOfDelivery').on('click', (ev)=>{
+            let  index = $(ev.target).index();
+            let textValue = '';
+            if( check== 2){
+                switch(index){
+                    case 0: textValue = '해지시까지'; break; 
+                    case 1: textValue = 2; break; 
+                    case 2: textValue = 4; break; 
+                    case 3: textValue = 6; break; 
+                    case 4: textValue = 12; break; 
+                }
+            }else if( check==4){
+                switch(index){
+                    case 0: textValue = '해지시까지'; break; 
+                    case 1: textValue = '1개월은 선택 불가능'; break; 
+                    case 2: textValue = 2; break; 
+                    case 3: textValue = 3; break; 
+                    case 4: textValue = 6; break; 
+                }
+            }else{ 
+                alert('개월을 선택하세요. ');
+            }
+ 
+            count = textValue; 
+          
+            if(check == 2){
+                discount = 0.1; 
+            }else{ 
+                discount = 0.2; 
+            }
+            calcuration();
+            const span = document.createElement('span');
+            $(span).text(textValue);
+      
+						const imSpan = $('.orderNumberOfDeliery span');
+						
+						if( imSpan ){
+							 $(imSpan).remove();
+						}
+
+            $('.orderNumberOfDeliery').append($(span));
+
+        }) // numberOfDelivery end
+
+
+        $('.deliveryDate').on('change', function(ev){
+            let deliveryDate = ev.target.value; 
+            console.log( deliveryDate);
+
+           
+            $(orderDate).find('span').text(deliveryDate );
+        })// deliveryDate end
+
+        $('.deliveryWeekday').on('click', (ev)=>{
+            let deliveryWeekday = $(ev.target).text(); 
+            $(orderWeekday).find('span').text( deliveryWeekday);
+        })// orderWeekday end 
+
+        let won = 0; 
+        let count =  0; 
+        let discount = 0;
+
+        function calcuration(){
+            $(productPice).find('span').eq(1).text(won + '원');
+            $(productDiscount).find('span').eq(1).text(discount*100 + '%');
+            $(paymentAmount).find('span').eq(1).text( won + won * count * discount + '원');
+        }
+
+        //calcuration();
+
+        $('.nav-tabs>li').eq(0).click(function(){
+            $('#section').show();
+        })
+        $('.nav-tabs>li').eq(1).click(function(){
+            $('#section').hide();
+        })
+        $('.nav-tabs>li').eq(2).click(function(){
+            $('#section').hide();
+        })
+
+        
+       $('.title').click(function(){
+           $('.content').hide();
+           $(this).next().show();
+          
+       })
+       $('.title2').click(function(){
+           $('.content2').hide();
+           $(this).next().show();
+          
+       })
+
+        $('.more_click').click(function(){
+            $('.title2').css("opacity", "1");
+            $('.content2').css("opacity", "1");
+            $('.more_click').hide();
+        })
+    </script>
+</body>
+</html>
